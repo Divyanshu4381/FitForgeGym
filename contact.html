@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact FitForge Gym - Get in touch with us for membership inquiries and more.">
+    <title>Contact Us - FitForge Gym</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'fitness-orange': '#F97316',
+                        'dark-slate': '#1F2937',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-body bg-white text-dark-slate">
+
+    <!-- Navbar -->
+    <nav class="bg-dark-slate text-white fixed w-full top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-heading font-bold">
+                <span class="text-fitness-orange">Fit</span>Forge
+            </div>
+
+            <ul class="hidden md:flex space-x-8 font-semibold">
+                <li><a href="index.html" class="hover:text-fitness-orange transition">Home</a></li>
+                <li><a href="about.html" class="hover:text-fitness-orange transition">About</a></li>
+                <li><a href="plans.html" class="hover:text-fitness-orange transition">Plans</a></li>
+                <li><a href="trainers.html" class="hover:text-fitness-orange transition">Trainers</a></li>
+                <li><a href="gallery.html" class="hover:text-fitness-orange transition">Gallery</a></li>
+                <li><a href="contact.html" class="hover:text-fitness-orange transition">Contact</a></li>
+            </ul>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <ul class="flex flex-col space-y-2 px-4 py-4">
+                <li><a href="index.html" class="block hover:text-fitness-orange transition">Home</a></li>
+                <li><a href="about.html" class="block hover:text-fitness-orange transition">About</a></li>
+                <li><a href="plans.html" class="block hover:text-fitness-orange transition">Plans</a></li>
+                <li><a href="trainers.html" class="block hover:text-fitness-orange transition">Trainers</a></li>
+                <li><a href="gallery.html" class="block hover:text-fitness-orange transition">Gallery</a></li>
+                <li><a href="contact.html" class="block hover:text-fitness-orange transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-dark-slate text-white py-20 text-center">
+        <h1 class="text-5xl font-heading font-bold mb-4">Contact <span class="text-fitness-orange">Us</span></h1>
+        <p class="text-xl">Get in Touch - We're Here to Help!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl font-heading font-bold mb-6">Get in <span
+                            class="text-fitness-orange">Touch</span></h2>
+
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="text-fitness-orange text-3xl mr-4">📞</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Phone</h3>
+                                <p class="text-gray-600">+91 98765 43210</p>
+                                <p class="text-sm text-gray-500">Mon-Sat: 6 AM - 10 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="text-fitness-orange text-3xl mr-4">📧</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Email</h3>
+                                <p class="text-gray-600">info@fitforgegym.com</p>
+                                <p class="text-sm text-gray-500">We'll respond within 24 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="text-fitness-orange text-3xl mr-4">📍</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Address</h3>
+                                <p class="text-gray-600">123 Fitness Street, Andheri West<br>Mumbai, Maharashtra 400058
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="text-fitness-orange text-3xl mr-4">⏰</div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Working Hours</h3>
+                                <p class="text-gray-600">Monday - Saturday: 6:00 AM - 10:00 PM</p>
+                                <p class="text-gray-600">Sunday: 7:00 AM - 8:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/919876543210?text=Hi,%20I%20want%20to%20visit%20FitForge%20Gym"
+                        target="_blank"
+                        class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition">
+                        💬 Chat on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h2 class="text-3xl font-heading font-bold mb-6">Send us a <span
+                            class="text-fitness-orange">Message</span></h2>
+
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block font-semibold mb-2">Full Name *</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-fitness-orange">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block font-semibold mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-fitness-orange">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block font-semibold mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-fitness-orange">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block font-semibold mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-fitness-orange"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-fitness-orange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition">
+                            Send Message
+                        </button>
+
+                        <p id="form-status" class="text-center text-sm"></p>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Google Map -->
+            <div class="mt-12 max-w-6xl mx-auto">
+                <h2 class="text-3xl font-heading font-bold mb-6 text-center">Find <span
+                        class="text-fitness-orange">Us</span></h2>
+                <div class="rounded-lg overflow-hidden shadow-lg">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.0!2d72.8347!3d19.1136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA2JzQ5LjAiTiA3MsKwNTAnMDUuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-slate text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-6">
+                <div>
+                    <h3 class="text-2xl font-heading font-bold mb-4"><span class="text-fitness-orange">Fit</span>Forge
+                    </h3>
+                    <p class="text-gray-400">Transform your body, transform your life.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-3">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-fitness-orange transition">About Us</a></li>
+                        <li><a href="plans.html" class="hover:text-fitness-orange transition">Membership Plans</a></li>
+                        <li><a href="contact.html" class="hover:text-fitness-orange transition">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-3">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📞 +91 98765 43210</li>
+                        <li>📧 info@fitforgegym.com</li>
+                        <li>📍 123 Fitness Street, Mumbai</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-400">
+                <p>&copy; 2026 FitForge Gym. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919876543210?text=Hi,%20I%20want%20to%20know%20more%20about%20FitForge%20Gym" target="_blank"
+        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg z-50 transition transform hover:scale-110"
+        aria-label="Contact on WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>

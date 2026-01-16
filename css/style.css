@@ -1,0 +1,64 @@
+/* Custom CSS for FitForge Gym */
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Padding for Fixed Navbar */
+body {
+    padding-top: 72px;
+}
+
+/* Active Link Highlight */
+nav a.active {
+    color: #F97316;
+    border-bottom: 2px solid #F97316;
+}
+
+/* Hero Section Height Adjustment */
+section.relative.h-screen {
+    margin-top: -72px;
+    padding-top: 72px;
+}
+
+/* Hover Effects for Cards */
+.hover\:shadow-xl:hover {
+    transform: translateY(-5px);
+}
+
+/* Animation for Floating Button */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.fixed.bottom-6.right-6 {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Image Optimization */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Form Input iOS Fix */
+input, textarea, select {
+    font-size: 16px;
+}
