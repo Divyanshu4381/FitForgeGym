@@ -44,21 +44,21 @@
 <body class="font-body bg-white text-dark-slate">
 
     <!-- Navbar -->
-    <nav
-        class="bg-dark-slate text-white fixed w-[95%] max-w-[1400px] left-1/2 -translate-x-1/2 top-4 z-50 shadow-lg rounded-full">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <nav class="bg-dark-slate text-white fixed w-full top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-heading font-bold">
                 <span class="text-fitness-orange">Fit</span>Forge
             </div>
 
             <!-- Desktop Menu -->
-            <ul class="hidden md:flex space-x-8 font-semibold">
-                <li><a href="index.html" class="hover:text-fitness-orange transition">Home</a></li>
-                <li><a href="about.html" class="hover:text-fitness-orange transition">About</a></li>
-                <li><a href="plans.html" class="hover:text-fitness-orange transition">Plans</a></li>
-                <li><a href="trainers.html" class="hover:text-fitness-orange transition">Trainers</a></li>
-                <li><a href="gallery.html" class="hover:text-fitness-orange transition">Gallery</a></li>
-                <li><a href="contact.html" class="hover:text-fitness-orange transition">Contact</a></li>
+            <ul class="hidden md:flex space-x-8 text-sm font-medium">
+                <li><a href="index.html"
+                        class="nav-link active pb-1 border-b-2 border-fitness-orange text-fitness-orange">Home</a></li>
+                <li><a href="about.html" class="nav-link hover:text-fitness-orange transition">About</a></li>
+                <li><a href="plans.html" class="nav-link hover:text-fitness-orange transition">Plans</a></li>
+                <li><a href="trainers.html" class="nav-link hover:text-fitness-orange transition">Trainers</a></li>
+                <li><a href="gallery.html" class="nav-link hover:text-fitness-orange transition">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link hover:text-fitness-orange transition">Contact</a></li>
             </ul>
 
             <!-- Mobile Menu Button -->
@@ -71,21 +71,23 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
-            <ul class="flex flex-col space-y-2 px-4 py-4">
-                <li><a href="index.html" class="block hover:text-fitness-orange transition">Home</a></li>
-                <li><a href="about.html" class="block hover:text-fitness-orange transition">About</a></li>
-                <li><a href="plans.html" class="block hover:text-fitness-orange transition">Plans</a></li>
-                <li><a href="trainers.html" class="block hover:text-fitness-orange transition">Trainers</a></li>
-                <li><a href="gallery.html" class="block hover:text-fitness-orange transition">Gallery</a></li>
-                <li><a href="contact.html" class="block hover:text-fitness-orange transition">Contact</a></li>
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-slate border-t border-gray-700">
+            <ul class="flex flex-col space-y-2 px-6 py-4">
+                <li><a href="index.html"
+                        class="block py-2 text-fitness-orange border-l-2 border-fitness-orange pl-3">Home</a></li>
+                <li><a href="about.html" class="block py-2 hover:text-fitness-orange transition pl-3">About</a></li>
+                <li><a href="plans.html" class="block py-2 hover:text-fitness-orange transition pl-3">Plans</a></li>
+                <li><a href="trainers.html" class="block py-2 hover:text-fitness-orange transition pl-3">Trainers</a>
+                </li>
+                <li><a href="gallery.html" class="block py-2 hover:text-fitness-orange transition pl-3">Gallery</a></li>
+                <li><a href="contact.html" class="block py-2 hover:text-fitness-orange transition pl-3">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section
-        class="relative h-[70vh] min-h-[450px] w-[95%] max-w-[1400px] mx-auto mt-24 rounded-[2.5rem] overflow-hidden flex items-center justify-center text-white shadow-2xl">
+        class="relative h-[70vh] min-h-[450px] w-[95%] max-w-[1400px] mx-auto mt-10 rounded-[2.5rem] overflow-hidden flex items-center justify-center text-white shadow-2xl">
         <!-- Video Background -->
         <video autoplay muted loop playsinline poster="assets/images/hero_gym_1768558541449.png"
             class="absolute inset-0 w-full h-full object-cover">
